@@ -1,0 +1,15 @@
+{
+    "uni-app": {
+        "scripts": {
+            "mp-weixin-release": { 
+                "title":"微信小程序外测", 
+                "env": { 
+                    "UNI_PLATFORM": "mp-weixin" 
+                },
+                "define": { 
+                    "MP-WEIXIN-RELEASE": true 
+                }
+            }
+        }
+    }
+}
