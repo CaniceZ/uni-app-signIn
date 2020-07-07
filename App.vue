@@ -11,6 +11,9 @@ export default {
 	}
 };
 </script>
+<style lang="scss">
+	@import './styles/flex.scss'
+</style>
 
 <style>
 /* 解决头条小程序组件内引入字体不生效的问题 */

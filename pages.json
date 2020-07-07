@@ -1,10 +1,18 @@
 {
-	"pages": [{
+	"pages": [
+		{
+		"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
 		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "七天签到"
+			"style": {
+				"navigationBarTitleText": "七天签到"
+			}
 		}
-	}],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",

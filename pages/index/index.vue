@@ -1,6 +1,9 @@
 <template>
 	<view class="container">
-		<view class="flex col">
+		<view class="flex center" style="margin-bottom: 30rpx;">
+			<h2>{{userNmae}}的积分：{{score}}</h2>
+		</view>
+		<view>
 			<view class="flex itemClass" v-for="(item,index) in lists" :key="index">
 				{{item.text}}
 				<button v-if="index == days && isSignIn == 0" type="primary" size="mini" @click="Sign">签到</button>
@@ -14,7 +17,7 @@
 	export default {
 		data() {
 			return {
-				lists:[
+				lists: [
 					{
 						text: "积分*1"
 					},
@@ -40,10 +43,11 @@
 				days:null,
 				isSignIn: 1,
 				score: 0,
+				userNmae: this.$store.state.loginProvider.username
 				
 			}
 		},
-		mounted(){
+		onLoad: function(){
 			this.getSign()
 		},
 		methods: {
@@ -68,7 +72,7 @@
 					url: this.$baseUrl + 'data/getSignData.do',
 					method: 'POST',
 					data: {
-						userId: 2
+						userId: this.$store.state.loginProvider.id
 					},
 					success: (res) => {
 						this.days = res.data.data.days

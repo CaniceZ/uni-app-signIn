@@ -5,9 +5,12 @@ console.log(BASE_URL)
 Vue.config.productionTip = false
 Vue.prototype.$baseUrl = BASE_URL
 App.mpType = 'app'
-import '@/styles/flex.scss' // global css
+import store from './store'
+Vue.prototype.$store = store
+
 
 const app = new Vue({
+	store,
 	...App
 })
 app.$mount()
